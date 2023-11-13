@@ -71,22 +71,59 @@
 // console.log(output);
 
 //*This is the version corrected of the behind function  found commun items with approach of Linear
-const array1 = ["a", "b", "c", "x"];
-const array2 = ["z", "y", "m"];
-function containsCommonItem(arr1, arr2) {
-  let hashtable = {};
-  for (let i = 0; i < arr1.length; i++) {
-    if (!hashtable[arr1[i]]) {
-      let item = arr1[i];
-      hashtable[item] = true;
-    }
-  }
-  for (let j = 0; j < arr2.length; j++) {
-    if (hashtable[arr2[j]]) {
-      return true;
-    }
-  }
-  return false;
-}
-let output = containsCommonItem(array1, array2);
-console.log(output);
+// function containsCommonItem(arr1, arr2) {
+//   let hashtable = {};
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (!hashtable[arr1[i]]) {
+//       let item = arr1[i];
+//       hashtable[item] = true;
+//     }
+//   }
+//   for (let j = 0; j < arr2.length; j++) {
+//     if (hashtable[arr2[j]]) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// let output = containsCommonItem(array1, array2);
+// console.log(output);
+
+//?This is inclusive a better approach to refactor my same function
+
+// const array1 = ["a", "b", "c", "x"];
+// const array2 = ["z", "y", "x"];
+
+// function containsCommonItem(arr1, arr2) {
+//   return arr1.some((item) => arr2.includes(item));
+// }
+// let output = containsCommonItem(array1, array2);
+// console.log(output);
+
+// function hasPairWithSum(arr, sum) {
+//   //retrun true if  i found tow numberrs in my arr that add up to sum
+//   //otherwise return false
+//   //iterar dos veces sobre mi arr, verificar si alguno de sus items sumados dan el total de suma, iterando una segunda desde i+1 para evitar repetir items
+//   let len = arr.length;
+//   for (let i = 0; i < len; i++) {
+//     for (let j = i + 1; j < len; j++) {
+//       if (arr[i] + arr[j] === sum) {
+//         return true;
+//       }
+//     }
+//   }
+//   return false;
+// }
+
+// function hasPairWithSum(arr, sum) {
+//   const mySet = new Set();
+//   for (const num of arr) {
+//     if (mySet.has(num)) return true;
+//     mySet.add(sum - num);
+//   }
+//   return false;
+// }
+// const nums = [1, 2, 3, 4, 5];
+// const goal = 9;
+// let output = hasPairWithSum(nums, goal);
+// console.log(output);
