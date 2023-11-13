@@ -4,5 +4,5 @@ help:                ## Shows this help.
 
 	
 run: 
-	node "/home/anggie/Proyectos/exercises/main.js"	
+	node "/home/anggie/Proyectos/Random/exercises/udemy.js"	
 	
