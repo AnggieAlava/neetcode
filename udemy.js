@@ -127,3 +127,4 @@
 // const goal = 9;
 // let output = hasPairWithSum(nums, goal);
 // console.log(output);
+
