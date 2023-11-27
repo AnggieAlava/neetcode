@@ -17,21 +17,19 @@ let inventory = [
   },
 ];
 
-//el objetivo es comparar los objetos enfocados en su propiedad shoes, y encontrar si alguna de las palabras del name de shoes contiene
-//"lace" dentro de ellas
+function getLace(inventory) {
+  const aux = [];
 
-function mapInObj(obj) {
-  let aux = [];
-  obj.forEach((property) => {
-    property.shoes.forEach((shoeName) => {
-      const nameSplited = shoeName.name.split(" ");
+  inventory.forEach((element) => {
+    element.shoes.forEach((item) => {
+      const splited = item.name.split(" ");
 
-      nameSplited.forEach((word, index) => {
-        if (word.startsWith("lace"))
-          aux.push({ nameWords: nameSplited, targetWordIndex: index });
+      splited.forEach((word, index) => {
+        if (word.startsWith("lace")) aux.push({ name: splited, index: index });
       });
     });
   });
   return aux;
 }
-console.log(mapInObj(inventory));
+
+console.log(getLace(inventory));
