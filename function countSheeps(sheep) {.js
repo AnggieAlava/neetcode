@@ -1,5 +1,5 @@
 function countSheeps(sheep) {
-  return sheep.filter(Boolean).length;
+  return sheep.filter((item) => !Boolean(item)).length;
 }
 
 let sheeps = [
