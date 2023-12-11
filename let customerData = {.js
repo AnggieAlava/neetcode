@@ -13,19 +13,19 @@ let customerData = {
   },
 };
 
-function greetCustomers(firstName) {
+function greetCustomer(firstName) {
   let greeting = "";
   if (!customerData.hasOwnProperty(firstName)) {
-    greeting = "Welcome! Is this your first time?";
+    greeting = "Welcome! is this your first time?";
   } else {
     const { visits } = customerData[firstName];
     greeting =
       visits === 1
-        ? `Welcome back! ${firstName}, we gladd you like us the first time`
-        : `Welcom back! ${firstName}, we glad you visited us ${visits} times`;
+        ? `Welcome back, ${firstName}`
+        : `So glad to see you again ${firstName}`;
   }
   return greeting;
 }
 
-let output = greetCustomers("Carrie");
+let output = greetCustomer("Joe");
 console.log(output);
