@@ -1,17 +1,20 @@
-# ENCONTRAR DOS NUMEROS QUE SUMADOS DEN COMO RESULTADO EL TARGET
+# RECIBO UN ARR DE NUMEROS Y DEBO ENCONTRAR DOS QUE
+# SUMEN UN NUMERO ESPECIFICO. RETORNA LA POSICION DE ESTOS NUMEROS
 
 def twoSum(nums, target):
-    # crear un hashmap vacio, donde ire mapeando el value con su index
-    # por medio de un loop buscare el complemento del target, si lo encuentro lo devuelvo con su index
-    # si no lo encuentro, guardo en el hashmap el value con su index
-    prevMap = {}
+    hashmap = {}
+    # usare un hashmap donde mapeare el valor con su index
+    # para luego buscar el complemento en el hashmap
+    # que sumado al numero actual den el target
 
+    # enumerate devuelve un iterador que contiene el index y el valor actual
     for i, n in enumerate(nums):
-        diff = target - n
-        if diff in prevMap:
-            return [prevMap[diff], i]
-        prevMap[n] = i
+        diff = target - n  # complemento
+        if diff in hashmap:  # si el complemento existe en el hashmap significa que ecnontre los dos numeros
+            # retorna el index del complemento y el index del numero actual
+            return [hashmap[diff], i]
+        hashmap[n] = i  # si el complemento no existe en el hashmap lo agrego
     return -1
 
 
-print(twoSum([2, 7, 11, 15], 9))
+print(twoSum([3, 2, 4], 6))
