@@ -1,12 +1,14 @@
-# Retornar true si en mi array hay como minimo dos elementos iguales
+# recibo una list de numeros y debo encontrar los duplicados
+# si como minimo 1 numero esta dupplicado retorno true
+# por lo contrario si cada numero es distinto, unico, retorno false
+
 def containsDuplicate(nums):
-    hashset = set()
+    hashset = set()  # aqui guardare los numeros unicos para cuando busco duplicados preguntarle al hashset si ya lo tiene
+    for n in nums:
+        if n in hashset:
+            return True
+        hashset.add(n)
+    return False
 
-    for n in nums:  # recorro mi array en busca de duplicados
-        if n in hashset:  # si el elemento ya esta en el hashset significa que hay un duplicado
-            return True  # retorno true
-        hashset.add(n)  # si el elemento no esta en el hashset lo agrego
-    return False  # retorno false si no hay duplicados
 
-
-print(containsDuplicate([1, 2, 3, 4]))
+print(containsDuplicate([1, 2, 1, 4]))
