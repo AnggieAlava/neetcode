@@ -2,15 +2,13 @@
 # SUMEN UN NUMERO ESPECIFICO. RETORNA LA POSICION DE ESTOS NUMEROS
 
 def twoSum(nums, target):
-    # crear un hashmap donde guardare los values con su index de nums
-    hashmap = {}
-    # recorro el list  nums para extraer los numeros con sus idex
-    for i, n in enumerate(nums):  # enumerate me devuelve una instancia de numero index
+    hashmap = {}  # mapear los actuales numeros con sus respectivos indices para en un futuro verificar si el complement existe ahi
+
+    for i, n in enumerate(nums):
         diff = target - n
         if diff in hashmap:
             return [hashmap[diff], i]
         hashmap[n] = i
-    return -1
 
 
-print(twoSum([1, 2, 3, 4], 6))
+print(twoSum([1, 2, 3, 3, 4, 5], 3))
