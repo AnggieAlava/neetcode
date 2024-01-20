@@ -2,8 +2,8 @@
 # si como minimo 1 numero esta dupplicado retorno true
 # por lo contrario si cada numero es distinto, unico, retorno false
 
-def containsDuplicate(nums):
-    hashset = set()  # aqui guardare los numeros unicos para cuando busco duplicados preguntarle al hashset si ya lo tiene
+def containDuplicate(nums):
+    hashset = set()
     for n in nums:
         if n in hashset:
             return True
@@ -11,4 +11,4 @@ def containsDuplicate(nums):
     return False
 
 
-print(containsDuplicate([1, 2, 1, 4]))
+print(containDuplicate([1, 2, 3, 1]))

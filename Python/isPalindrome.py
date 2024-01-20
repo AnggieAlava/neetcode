@@ -1,9 +1,6 @@
 # A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 # Given a string s, return true if it is a palindrome, or false otherwise.
-
-
 # Example 1:
-
 # Input: s = "A man, a plan, a canal: Panama"
 # Output: true
 # Explanation: "amanaplanacanalpanama" is a palindrome.
@@ -19,40 +16,36 @@
 # Explanation: s is an empty string "" after removing non-alphanumeric characters.
 # Since an empty string reads the same forward and backward, it is a palindrome.
 
-
-# def isPalindrom(string):
+# def validPalindrome(str):
 #     newStr = ""
-
-#     for char in string:
-#         if char.isalnum():
-#             newStr += char.lower()
+#     for c in str:
+#         if c.isalnum():  # A-Z a-z 0-9
+#             newStr += c.lower()
 #     return newStr == newStr[::-1]
 
 
-# print(isPalindrom("race a car"))
-# # print(isPalindrom("A man, a plan, a canal: Panama"))
+# print(validPalindrome("race a car"))
 
+def validPalindrome(s):
+    l = 0
+    r = len(s) - 1
 
-def isPalindrom(str):
-    left = 0
-    right = len(str) - 1
-    while left < right:
-        while left < right and not isAlphaNum(str[left]):
-            left += 1
-        while right > left and not isAlphaNum(str[right]):
-            right -= 1
-        if str[left].lower() != str[right].lower():
+    while l < r:
+        while l < r and not isAlphaNum(s[l]):
+            l += 1
+        while r > l and not isAlphaNum(s[r]):
+            r -= 1
+        if s[l].lower() != s[r].lower():
             return False
-        left = left + 1
-        right = right - 1
+        l += 1
+        r -= 1
     return True
 
 
-def isAlphaNum(char):
-    return (ord('A') <= ord(char) <= ord('Z') or
-            ord('a') <= ord(char) <= ord('z') or
-            ord('0') <= ord(char) <= ord('9'))
+def isAlphaNum(c):
+    return (ord('A') <= ord(c) <= ord('Z') or
+            ord('a') <= ord(c) <= ord('z') or
+            ord("0") <= ord(c) <= ord('9'))
 
 
-print(isPalindrom("race a car"))
-# print(isPalindrom("A man, a plan, a canal: Panama"))
+print(validPalindrome('aba'))
