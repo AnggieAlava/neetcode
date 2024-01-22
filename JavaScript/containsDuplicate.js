@@ -1,11 +1,11 @@
 function containsDuplicate(nums) {
-  const set = new Set(); //guardar los valores unicos
-
-  for (let n of nums) {
-    if (set.has(n)) {
+  const hashset = new Set();
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    if (hashset.has(num)) {
       return true;
     }
-    set.add(n);
+    hashset.add(num);
   }
   return false;
 }
