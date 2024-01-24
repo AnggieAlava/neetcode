@@ -18,9 +18,9 @@
 // Output: true
 // Explanation: s is an empty string "" after removing non-alphanumeric characters.
 // Since an empty string reads the same forward and backward, it is a palindrome.
-
-function isPalindrome(s) {
+function validPalindrome(s) {
   let newStr = s.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
   return newStr === newStr.split("").reverse().join("");
 }
-console.log(isPalindrome("race a car"));
+
+console.log(validPalindrome("A man, a plan, a canal: Panama"));

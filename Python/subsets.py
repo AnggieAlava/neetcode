@@ -9,22 +9,21 @@
 # Input: nums = [0]
 # Output: [[],[0]]
 
-def generate_subsets(nums):
-    subsets = []  # Initialize an empty list to store the subsets
-    # Initialize an empty list to store the current subset being constructed
+def subsets(nums):
+    result = []
     current_subset = []
 
-    def generate(index):  # Define a recursive function to generate subsets
-        # Base case: if the index is equal to or greater than the length of the input list
-        if index >= len(nums):
-            # Add a copy of the current subset to the list of subsets
-            subsets.append(current_subset.copy())
-            return  # Return from the current recursive call
-        # Include the current number in the subset
-        current_subset.append(nums[index])
-        generate(index + 1)  # Recur with the next index
-        current_subset.pop()  # Exclude the current number from the subset
-        generate(index + 1)  # Recur with the next index
+    def deep_first_search(i):
+        if i >= len(nums):
+            result.append(current_subset.copy())
+            return
+        current_subset.append(nums[i])
+        deep_first_search(i + 1)
 
-    generate(0)  # Start the recursive generation process with the initial index
-    return subsets  # Return the list of subsets
+        current_subset.pop()
+        deep_first_search(i + 1)
+    deep_first_search(0)
+    return result
+
+
+print(subsets([1, 2, 3]))

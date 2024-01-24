@@ -7,10 +7,11 @@
 // Example 2:
 // Input: s = "rat", t = "car"
 // Output: false
-function isAnagram(s, t) {
+function validAnagram(s, t) {
   if (s.length !== t.length) {
     return false;
   }
+
   let countS = {};
   let countT = {};
 
@@ -18,6 +19,7 @@ function isAnagram(s, t) {
     countS[s[i]] = (countS[s[i]] || 0) + 1;
     countT[t[i]] = (countT[t[i]] || 0) + 1;
   }
+
   for (let c in countS) {
     if (countS[c] !== countT[c]) {
       return false;
@@ -25,4 +27,5 @@ function isAnagram(s, t) {
   }
   return true;
 }
-console.log(isAnagram("rat", "car"));
+
+console.log(validAnagram("cor", "car"));

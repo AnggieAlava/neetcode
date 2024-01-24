@@ -8,7 +8,7 @@
 # Input: s = "rat", t = "car"
 # Output: false
 
-def isAnagram(s, t):
+def validAnagram(s, t):
     if len(s) != len(t):
         return False
     countS = {}
@@ -23,4 +23,4 @@ def isAnagram(s, t):
     return True
 
 
-print(isAnagram("rat", "car"))
+print(validAnagram("car", "cor"))

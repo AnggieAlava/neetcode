@@ -1,11 +1,11 @@
 function containsDuplicate(nums) {
-  const hashset = new Set();
+  const set = new Set();
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i];
-    if (hashset.has(num)) {
+    if (set.has(num)) {
       return true;
     }
-    hashset.add(num);
+    set.add(num);
   }
   return false;
 }
