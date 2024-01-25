@@ -8,9 +8,11 @@
 # Input: s = "rat", t = "car"
 # Output: false
 
+
 def validAnagram(s, t):
     if len(s) != len(t):
         return False
+
     countS = {}
     countT = {}
 
@@ -23,4 +25,4 @@ def validAnagram(s, t):
     return True
 
 
-print(validAnagram("car", "cor"))
+print(validAnagram("car", "car"))

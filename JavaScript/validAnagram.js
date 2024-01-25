@@ -7,6 +7,7 @@
 // Example 2:
 // Input: s = "rat", t = "car"
 // Output: false
+
 function validAnagram(s, t) {
   if (s.length !== t.length) {
     return false;
@@ -28,4 +29,4 @@ function validAnagram(s, t) {
   return true;
 }
 
-console.log(validAnagram("cor", "car"));
+console.log(validAnagram("anagram", "nagaram"));

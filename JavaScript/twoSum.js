@@ -1,13 +1,14 @@
 function twoSum(nums, target) {
-  const hashmap = {};
+  let hashset = new Set();
   for (let i = 0; i < nums.length; i++) {
-    const n = nums[i];
+    let n = nums[i];
     let diff = target - n;
-    if (diff in hashmap) {
-      return [hashmap[diff], i];
+    if (diff in hashset) {
+      return [hashset[diff], i];
     }
-    hashmap[n] = i;
+    hashset[n] = i;
   }
+  return -1;
 }
 
-console.log(twoSum([1, 2, 3, 4, 5], 9));
+console.log(twoSum([1, 2, 3, 4, 5], 3));
