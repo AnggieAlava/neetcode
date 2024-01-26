@@ -1,13 +1,13 @@
 function containsDuplicate(nums) {
-  const set = new Set();
-  for (let i = 0; i < nums.length; i++) {
-    const num = nums[i];
-    if (set.has(num)) {
+  const prevSet = new Set();
+
+  for (let num of nums) {
+    if (prevSet.has(num)) {
       return true;
     }
-    set.add(num);
+    prevSet.add(num);
   }
   return false;
 }
 
-console.log(containsDuplicate([1, 2, 3, 1]));
+console.log(containsDuplicate([1, 2, 3, 4, 1]));

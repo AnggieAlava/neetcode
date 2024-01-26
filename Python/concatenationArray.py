@@ -23,7 +23,7 @@
 
 def concatenationArray(nums):
     ans = []
-    for i in range(2):
+    for i in range(5):
         for n in nums:
             ans.append(n)
     return ans

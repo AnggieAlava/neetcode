@@ -1,15 +1,15 @@
 # recibo una list de numeros y debo encontrar los duplicados
 # si como minimo 1 numero esta dupplicado retorno true
 # por lo contrario si cada numero es distinto, unico, retorno false
-# [1,2,31] [1,2,3,4]
+# [1,2,3,1] [1,2,3,4]
 
 
 def containsDuplicate(nums):
-    hashset = set()  # aqui guardare los elementos unicos
+    prevSet = set()
     for n in nums:
-        if n in hashset:
+        if n in prevSet:
             return True
-        hashset.add(n)
+        prevSet.add(n)
     return False
 
 
