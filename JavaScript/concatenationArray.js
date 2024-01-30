@@ -21,6 +21,7 @@
 
 function concatenationArray(nums) {
   const ans = [];
+
   for (let i = 0; i < 2; i++) {
     for (let n of nums) {
       ans.push(n);
@@ -28,4 +29,5 @@ function concatenationArray(nums) {
   }
   return ans;
 }
+
 console.log(concatenationArray([1, 2, 3]));

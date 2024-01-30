@@ -9,12 +9,10 @@
 // Output: false
 
 function validAnagram(s, t) {
-  if (s.length !== t.length) {
-    return false;
-  }
+  if (s.length !== t.length) return false;
 
-  let countS = {};
-  let countT = {};
+  const countS = {};
+  const countT = {};
 
   for (let i = 0; i < s.length; i++) {
     countS[s[i]] = (countS[s[i]] || 0) + 1;
@@ -22,9 +20,7 @@ function validAnagram(s, t) {
   }
 
   for (let c in countS) {
-    if (countS[c] !== countT[c]) {
-      return false;
-    }
+    if (countS[c] !== countT[c]) return false;
   }
   return true;
 }

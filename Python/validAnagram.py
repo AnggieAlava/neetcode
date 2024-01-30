@@ -12,7 +12,6 @@
 def validAnagram(s, t):
     if len(s) != len(t):
         return False
-
     countS = {}
     countT = {}
 
@@ -25,4 +24,4 @@ def validAnagram(s, t):
     return True
 
 
-print(validAnagram("car", "car"))
+print(validAnagram("rat", "car"))

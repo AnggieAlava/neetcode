@@ -19,10 +19,9 @@
 
 def validPalindrome(s):
     newString = ""
-
-    for c in s:
-        if c.isalnum():
-            newString += c.lower()
+    for i in s:
+        if i.isalnum():
+            newString += i.lower()
     return newString == newString[::-1]
 
 

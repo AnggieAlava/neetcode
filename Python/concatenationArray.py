@@ -20,13 +20,13 @@
 # - ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]
 # - a
 
-
 def concatenationArray(nums):
     ans = []
-    for i in range(5):
+
+    for i in range(3):
         for n in nums:
             ans.append(n)
     return ans
 
 
-print(concatenationArray([1, 3, 2, 1]))
+print(concatenationArray([1, 2, 3]))
