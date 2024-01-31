@@ -21,13 +21,13 @@
 # Explanation: There are no elements to the right of index 0.
 
 
-def replaceElements(nums):
-    maxRight = -1
-    for n in range(len(nums) - 1, -1, -1):
-        currentItem = nums[n]
-        nums[n] = maxRight
-        maxRight = max(maxRight, currentItem)
-    return nums
+def replaceElements(arr):
+    maxRigth = -1
+    for i in range(len(arr)-1, -1, -1):
+        current = arr[i]
+        arr[i] = maxRigth
+        maxRigth = max(current, maxRigth)
+    return arr
 
 
-print(replaceElements([8, 9, 3, 4, 5, 1]))
+print(replaceElements([12, 9, 5, 6, 8, 2]))

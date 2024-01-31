@@ -14,14 +14,15 @@
 // Input: arr = [400]
 // Output: [-1]
 // Explanation: There are no elements to the right of index 0.
+
 function replaceElements(arr) {
-  let maxRight = -1;
+  let maxRigth = -1;
   for (let i = arr.length - 1; i >= 0; i--) {
-    let currentItem = arr[i];
-    arr[i] = maxRight;
-    maxRight = Math.max(maxRight, currentItem);
+    let current = arr[i];
+    arr[i] = maxRigth;
+    maxRigth = Math.max(current, maxRigth);
   }
   return arr;
 }
 
-console.log(replaceElements([8, 9, 3, 4, 5, 1]));
+console.log(replaceElements([9, 12, 6, 7, 1, 8])); //[8,8,8,8,8,-1]
