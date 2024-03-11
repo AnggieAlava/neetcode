@@ -1,4 +1,4 @@
-def containd_duplicate(nums):
+def contains_duplicate(nums):
     hashset = set()
     for n in nums:
         if n in hashset:
@@ -7,4 +7,4 @@ def containd_duplicate(nums):
     return False
 
 
-print(containd_duplicate([1, 2, 3, 4, 5, 1]))
+print(contains_duplicate([1, 3, 4]))
