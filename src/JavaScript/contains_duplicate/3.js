@@ -1,5 +1,5 @@
 function containsDuplicate(nums) {
-  const hashset = new Set()
+  let hashset = new Set()
   for (const n of nums) {
     if (hashset.has(n)) return true
     hashset.add(n)
