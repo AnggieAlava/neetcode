@@ -1,11 +1,10 @@
-function containsDuplicate(nums: number[]): boolean {
-  const set = new Set();
-
-  for (let n = 0; n < nums.length; n++) {
-    if (set.has(nums[n])) return true;
-    else set.add(nums[n]);
+function contains_duplicate(nums: number[]): boolean {
+  const uniques: Set<number> = new Set();
+  for (const n of nums) {
+    if (uniques.has(n)) return true;
+    uniques.add(n);
   }
   return false;
 }
 
-console.log(containsDuplicate([1, 2, 3, 4]));
+console.log(contains_duplicate([1, 2, 3, 1]));

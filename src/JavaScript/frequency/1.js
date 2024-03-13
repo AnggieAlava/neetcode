@@ -1,19 +1,30 @@
-const sample = "This is a common interview question";
 
 function frequency(sentence) {
-  const charFrequency = {};
+  let count = {}
+  let maxCount = 0
+  let maxChar = ''
 
-  // Calcular la frecuencia de cada carácter en la cadena
-  for (const char of sentence) {
-    charFrequency[char] = sentence.split(char).length - 1;
+  let formatedSentence = sentence.replace(/\s+/g, '').toLowerCase()
+
+  for (let char of formatedSentence) {
+    count[char] = (count[char] || 0) + 1
+    if (count[char] > maxCount) {
+      maxCount = count[char]
+      maxChar = char
+    }
   }
-
-  // Ordenar el objeto de frecuencia de caracteres
-  const charFrequencySorted = Object.entries(charFrequency)
-    .sort((a, b) => b[1] - a[1]);
-
-  // Devolver el carácter más frecuente
-  return charFrequencySorted[0];
+  return [maxChar, maxCount]
 }
 
-console.log(frequency(sample));
+let result = 'This is a common interview question'
+console.log(frequency(result))
+
+
+
+
+
+
+
+
+
+const sample = "This is a common interview question";

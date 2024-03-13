@@ -1,15 +1,14 @@
-# Algoritmo para encontrar duplicados en un array de números
+# Crea un algoritmo para encontrar duplicados en un array de números
 # Parámetro: nums, array de números
 # Retorno: Booleano, True si hay duplicados, False si no hay duplicados
 
-
 def contains_duplicate(nums):
-    hashset = set()
-    for n in nums:
-        if n in hashset:
+    uniques = set()
+    for number in nums:
+        if number in uniques:
             return True
-        hashset.add(n)
+        uniques.add(number)
     return False
 
 
-print(contains_duplicate([1, 2, 3, 4]))
+print(contains_duplicate([1, 2, 3, 4, 2]))
