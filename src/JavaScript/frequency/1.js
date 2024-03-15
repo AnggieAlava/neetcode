@@ -18,13 +18,3 @@ function frequency(sentence) {
 
 let result = 'This is a common interview question'
 console.log(frequency(result))
-
-
-
-
-
-
-
-
-
-const sample = "This is a common interview question";

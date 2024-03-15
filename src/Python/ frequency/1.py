@@ -17,5 +17,5 @@ def frequency(sentence):
     return char_frequency_sorted[0]
 
 
-sample = "This is a common interview question"
+sample = 'This is a common interview question'
 print(frequency(sample))
