@@ -1,4 +1,4 @@
-const sample: string =
+const samples: string =
   'Esta es una pregunta frecuente en las entrevistas tecnicas';
 
 function frequency(sentence: string): [string, number] {
