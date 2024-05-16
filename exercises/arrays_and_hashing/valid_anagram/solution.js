@@ -1,8 +1,9 @@
 function validAnagram(s, t) {
-  if (s.length !== t.length) return false;
-
-  const countS = {};
-  const countT = {};
+  if (s.length !== t.length) {
+    return false;
+  }
+  let countS = {};
+  let countT = {};
 
   for (let i = 0; i < s.length; i++) {
     countS[s[i]] = (countS[s[i]] || 0) + 1;
@@ -16,4 +17,4 @@ function validAnagram(s, t) {
   return true;
 }
 
-console.log(validAnagram('car', 'cat'));
+console.log(validAnagram('car', 'rac')); // true
