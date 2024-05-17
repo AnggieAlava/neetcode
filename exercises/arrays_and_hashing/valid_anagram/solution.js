@@ -17,4 +17,4 @@ function validAnagram(s, t) {
   return true;
 }
 
-console.log(validAnagram('car', 'rac')); // true
+console.log(validAnagram('car', 'cat')); // true
