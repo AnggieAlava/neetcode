@@ -1,9 +1,11 @@
 # Two Sum
+
 ### Objetivo
+
 Dada una lista de números y un número objetivo, encuentra dos números en la lista que sumen el número objetivo.
 
 - Requisitos
-Escribe una función two_sum(nums, target) donde:
+  Escribe una función two_sum(nums, target) donde:
 
 1. nums es una lista de números enteros.
 2. target es un número entero.
@@ -12,4 +14,5 @@ Escribe una función two_sum(nums, target) donde:
 Puedes asumir que cada entrada tendría exactamente una solución, y no puedes usar el mismo elemento dos veces.
 
 Ejemplo
-La función two_sum(nums, target) debe retornar [0, 1], porque nums[0] + nums[1] = 2 + 7 = 9.
+La función two_sum(nums, target) donde nums = [2,7,4,5] y target = 9
+debe retornar [0, 1], porque nums[0] + nums[1] = 2 + 7 = 9.
