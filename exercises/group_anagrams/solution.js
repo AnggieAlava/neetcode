@@ -18,7 +18,6 @@ function groupAnagrams(strs) {
   // Devuelve los valores del objeto, que son las listas de anagramas
   return Object.values(res);
 }
-
 // Ejemplo de uso
 const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 const result = groupAnagrams(strs);
