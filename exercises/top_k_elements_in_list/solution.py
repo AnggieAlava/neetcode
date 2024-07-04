@@ -3,14 +3,14 @@ def topKFrequent(nums, k):
     # Inicializa un diccionario para almacenar la frecuencia de cada número en la lista.
     count = {}
 
-    # Inicializa una lista de listas (cubos) para almacenar los números que tienen la misma frecuencia.
-    # La longitud de la lista de cubos es igual a la longitud de la lista de entrada más uno.
+    # Inicializa una lista de listas para almacenar los números que tienen la misma frecuencia.
+    # La longitud de la lista es igual a la longitud de la lista de entrada más uno.
     freq = [[] for i in range(len(nums) + 1)]
 
     # Itera sobre cada número en la lista de entrada.
     for n in nums:
-        # Si el número ya está en el diccionario 'count', incrementa su valor en 1.
-        # Si el número no está en el diccionario 'count', lo añade con el valor 1.
+        # Si la key ya existe en el objeto 'count', incrementa su valor en 1.
+        # Si la key no existe en el objeto 'count', lo añade con el valor 1.
         count[n] = 1 + count.get(n, 0)
 
     # Itera sobre cada número y su frecuencia en el diccionario 'count'.
