@@ -1,3 +1,0 @@
-# Leetcode exercises
-
-Working on ...

@@ -1,10 +1,20 @@
-def contains_duplicate(nums):
-    uniques = set()
-    for n in nums:
-        if n in uniques:
-            return True
-        uniques.add(n)
+def valid_anagram(s, t):
+    if len(s) != len(t):
+        return False
+
+    countS, countT = {}, {}
+
+    for char in range(len(s)):
+        countS[s[char]] = countS.get(s[char], 0) + 1
+        countT[t[char]] = countT.get(t[char], 0) + 1
+
+    print(countS)
+    print(countT)
+
+    if countS == countT:
+        return True
+
     return False
 
 
-print(contains_duplicate([1, 2, 3, 4, 3]))
+print(valid_anagram('cat', 'cat'))

@@ -1,41 +1,13 @@
-function topKFrequent(nums, k) {
-  // Inicializa un objeto para almacenar la frecuencia de cada número en la lista.
-  let count = {};
+function containsDuplicate(nums) {
+  const uniques = new Set();
 
-  // Inicializa una lista de listas para almacenar los números que tienen la misma frecuencia.
-  // La longitud de la lista es igual a la longitud de la lista de entrada más uno.
-  let freq = Array.from({ length: nums.length + 1 }, () => []);
-
-  // Itera sobre cada número en la lista de entrada.
   for (let n of nums) {
-    //Si la key ya existe en el objeto 'count', incrementa su valor en 1.
-    count[n] = (count[n] || 0) + 1;
-  }
-
-  // Itera sobre cada número y su frecuencia en el objeto 'count'.
-  for (let key in count) {
-    // Añade el número a la lista en 'freq' que corresponde a su frecuencia.
-    freq[count[key]].push(key);
-  }
-
-  // Inicializa una lista vacía para los resultados.
-  let res = [];
-
-  // Itera sobre 'freq' en orden inverso (desde la frecuencia más alta hasta la más baja).
-  for (let i = freq.length - 1; i >= 0; i--) {
-    // Itera sobre cada número en la lista actual.
-    for (let n of freq[i]) {
-      // Añade el número a 'res'.
-      res.push(n);
-      // Si la longitud de 'res' es igual a k, devuelve 'res'.
-      if (res.length === k) {
-        return res;
-      }
+    if (uniques.has(n)) {
+      return true;
     }
+    uniques.add(n);
   }
-  return res;
+  return false;
 }
 
-// Ejemplo de uso
-console.log(topKFrequent([1, 2, 2, 3, 3, 3], 2)); // Output: [2,3]
-console.log(topKFrequent([7, 7], 1)); // Output: [7]
+console.log([1, 2, 3]);
