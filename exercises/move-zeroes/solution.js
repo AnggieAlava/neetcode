@@ -1,13 +1,16 @@
-def move_zeroes(nums):
-    last_non_zero_found_at = 0
+function moveZeroes(nums) {
+    let lastNonZeroFoundAt = 0;
     
-    # Move all non-zero elements to the beginning of the array
-    for i in range(len(nums)):
-        if nums[i] != 0:
-            nums[last_non_zero_found_at], nums[i] = nums[i], nums[last_non_zero_found_at]
-            last_non_zero_found_at += 1
+    // Move all non-zero elements to the beginning of the array
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== 0) {
+            [nums[lastNonZeroFoundAt], nums[i]] = [nums[i], nums[lastNonZeroFoundAt]];
+            lastNonZeroFoundAt++;
+        }
+    }
+}
 
-# Ejemplo de uso
-nums = [0, 1, 0, 3, 12]
-move_zeroes(nums)
-print(nums)  # Salida: [1, 3, 12, 0, 0]
+// Ejemplo de uso
+let nums = [0, 1, 0, 3, 12];
+moveZeroes(nums);
+console.log(nums);  // Salida: [1, 3, 12, 0, 0]
