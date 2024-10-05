@@ -2,7 +2,7 @@ def reverse_string(s):
     # Verificar que la entrada es valida
     if not s or len(s) < 2 or not isinstance(s, str):
         return False
-    
+
     # Convertir la cadena a una lista y luego invertirla
 
     backwards = []
