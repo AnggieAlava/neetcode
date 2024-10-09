@@ -1,15 +1,14 @@
-def reverse_string(s):
-    # validar que el input sea un string 
-    if not s or len(s) < 2 or not isinstance(s, str):
-        return False
-    
-    # convertirlo a array y reversarlo iterando de atras hacia adelante
+def reverse_a_string(sentence):
+    if not sentence or len(sentence) < 2 or not isinstance(sentence, str):
+        return False 
+    # convertir el input a una lista
     backwards = []
-    items = len(s) - 1
-
-    for i in range(items, -1 , -1):
-        backwards.append(s[i])
+    # establezco el inicio de la iteracion
+    last_item = len(sentence) - 1
+    # itero sobre sentence y reverso con range
+    for i in range(last_item, -1, -1):
+        backwards.append(sentence[i])
     return ''.join(backwards)
 
 
-print(reverse_string('Hello my name is Andrei'))
+print(reverse_a_string('Hello my name is Andrei'))
