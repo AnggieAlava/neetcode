@@ -1,12 +1,19 @@
 def max_subarray(nums):
-    max_current = max_global = nums[0]
+    # Inicializa la variable 'maximum' con el primer elemento del array 'nums'
+    maximum = nums[0]
     
-    for num in nums[1:]:
-        max_current = max(num, max_current + num)
-        if max_current > max_global:
-            max_global = max_current
+    # Itera sobre los elementos del array 'nums' comenzando desde el segundo elemento (índice 1)
+    for i in range(1, len(nums)):
+        # Actualiza 'nums[i]' con el valor máximo entre 'nums[i]' y 'nums[i] + nums[i - 1]'
+        # Esto decide si es mejor comenzar un nuevo subarray en 'nums[i]' o continuar con el subarray actual sumando 'nums[i]' al subarray que termina en 'nums[i - 1]'
+        nums[i] = max(nums[i], nums[i] + nums[i - 1])
+        
+        # Actualiza 'maximum' con el valor máximo entre 'maximum' y 'nums[i]'
+        # Esto asegura que 'maximum' siempre contenga la suma máxima del subarray encontrada hasta ahora
+        maximum = max(maximum, nums[i])
     
-    return max_global
+    # Devuelve la suma máxima del subarray encontrada en el array 'nums'
+    return maximum
 
 # Ejemplos de uso
 print(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))  # Salida: 6

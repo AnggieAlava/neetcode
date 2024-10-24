@@ -1,4 +1,17 @@
 def frequency(sentence):
+    """
+    Calcula la frecuencia de cada letra en una oración dada y retorna la letra con mayor frecuencia.
+
+    Args:
+        sentence (str): La oración de entrada de la cual se calculará la frecuencia de las letras.
+
+    Returns:
+        tuple: Una tupla que contiene la letra con mayor frecuencia y su conteo.
+
+    Ejemplo:
+        >>> frequency("Hola Mundo")
+        ('o', 2)
+    """
     # Formatear el string para quitar espacios y volverlo todo a minúsculas
     formatted_sentence = sentence.replace(' ', '').lower()
 
