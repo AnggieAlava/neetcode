@@ -1,12 +1,13 @@
-Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+Dadas dos cadenas s y t, devuelve true si t es un anagrama de s, y false en caso contrario.
 
-An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+Un Anagrama es una palabra o frase formada al reorganizar las letras de una palabra o frase diferente, utilizando todas las letras originales exactamente una vez.
 
-Example 1:
+Ejemplo 1:
 
-Input: s = "anagram", t = "nagaram"
-Output: true
-Example 2:
+Entrada: s = "anagram", t = "nagaram"
+Salida: true
 
-Input: s = "rat", t = "car"
-Output: false
+Ejemplo 2:
+
+Entrada: s = "rat", t = "car"
+Salida: false
